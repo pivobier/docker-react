@@ -3,8 +3,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install 
 COPY ./ ./
-RUN ls -l ./
-RUN ls -l build
 CMD ["npm", "run" ,"build"]
 
 FROM nginx
