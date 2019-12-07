@@ -3,10 +3,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install 
 COPY ./ ./
+RUN npm run build
 CMD ["npm", "run" ,"build"]
-RUN ls -l ./
-RUN ls -l /app
-RUN ls -l /app/build
 
 FROM nginx
 EXPOSE 80
